@@ -133,19 +133,6 @@ a:hover { color: var(--accent-hover); }
 .hero-stack li { display: inline-flex; align-items: center; gap: 8px; }
 .hero-stack li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--warm-line); }
 
-.portrait-badge {
-  display: inline-flex; align-items: center; gap: 12px; margin-top: 18px;
-  padding: 8px 18px 8px 8px; border: 1px solid var(--border); border-radius: 999px;
-  background: var(--surface); color: var(--text); box-shadow: var(--shadow);
-  font: inherit; text-align: left; cursor: pointer;
-  transition: transform .18s, border-color .18s;
-}
-.portrait-badge:hover { transform: translateY(-2px); border-color: var(--warm-line); }
-.portrait-badge .jarvis-orb { width: 32px; height: 32px; }
-.badge-text { display: flex; flex-direction: column; line-height: 1.25; }
-.badge-text strong { font-size: 15px; }
-.badge-text small { color: var(--muted); font-size: 12.5px; }
-
 /* ---------- buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -228,8 +215,6 @@ a:hover { color: var(--accent-hover); }
   background: var(--accent-contrast); color: var(--accent); text-decoration: none; font-weight: 650;
 }
 .contact-links a:hover { color: var(--accent-hover); }
-.contact-card .btn-ghost { margin-top: 14px; border-color: color-mix(in srgb, var(--accent-contrast) 35%, transparent); color: var(--accent-contrast); }
-.contact-card .btn-ghost:hover { border-color: var(--accent-contrast); color: var(--accent-contrast); }
 
 /* ---------- footer ---------- */
 .site-footer { padding: 28px 0; color: var(--muted); font-size: 14px; }

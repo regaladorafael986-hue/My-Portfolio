@@ -1,4 +1,4 @@
-// Renders the portfolio from /data/profile.json — the same file Jarvis answers from.
+// Renders the portfolio from /data/profile.json.
 (function () {
   "use strict";
 

@@ -6,7 +6,7 @@
   "tagline": "I build complete web applications, from the database and REST API to the interface people use.",
   "location": "",
   "summary": "I'm a full-stack developer who works mostly with JavaScript, Node.js and PostgreSQL. I like building systems end to end: data models, secure APIs, payment and email integrations, and fast, accessible front ends without heavy frameworks.",
-  "contactBlurb": "Want to work together or ask about a project? Reach me through the links below, or ask Jarvis anything about my work.",
+  "contactBlurb": "Want to work together or ask about a project? Reach me through the links below.",
   "email": "",
   "links": [
     {
@@ -49,14 +49,5 @@
     }
   ],
   "experience": [],
-  "education": [],
-  "jarvis": {
-    "greeting": "Hi, I'm Jarvis, Rafael's personal AI assistant. Ask me anything about Rafael: background, skills, projects, or how to get in touch.",
-    "suggestions": [
-      "Who is Rafael?",
-      "What has Rafael built?",
-      "What is Rafael good at?",
-      "How can I contact Rafael?"
-    ]
-  }
+  "education": []
 }

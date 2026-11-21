@@ -2,12 +2,8 @@
   "name": "my-portfolio",
   "private": true,
   "type": "module",
-  "description": "Personal portfolio with Jarvis, an AI assistant served by a Vercel function.",
+  "description": "Personal portfolio: static HTML, CSS and vanilla JS.",
   "scripts": {
-    "start": "node scripts/dev-server.js",
-    "test": "node --test tests/"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "1.8.0"
+    "start": "node scripts/dev-server.js"
   }
 }
