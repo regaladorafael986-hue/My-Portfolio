@@ -11,8 +11,9 @@
   <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231d3461'/%3E%3Ctext x='16' y='21' font-size='13' font-weight='700' text-anchor='middle' fill='%23e3a65d' font-family='Georgia,serif'%3ERR%3C/text%3E%3C/svg%3E">
-  <link rel="preload" as="image" href="/assets/rafael-regalado-cutout-640.webp" imagesrcset="/assets/rafael-regalado-cutout-640.webp 640w, /assets/rafael-regalado-cutout-1086.webp 1086w" imagesizes="(max-width: 760px) 60vw, 360px">
+  <link rel="preload" as="image" href="/assets/rafael-regalado-cutout-1086.webp" imagesrcset="/assets/rafael-regalado-cutout-640.webp 640w, /assets/rafael-regalado-cutout-1086.webp 1086w" imagesizes="(max-width: 900px) 80vw, 560px">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/skill-icons.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
 <body>
@@ -28,6 +29,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -35,30 +37,37 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="container hero-layout">
+      <div class="container hero-grid">
+        <div class="hero-intro">
+            <span class="hero-rule" aria-hidden="true"></span>
+          <h1 class="hero-title">I'm <span data-name-part="first">Rafael</span>, a <span class="hero-role" data-field="role">Full-stack mobile &amp; web developer</span></h1>
+          <p class="hero-lead" data-field="tagline"></p>
+          <a class="hero-scroll" href="#about" aria-label="Scroll to About">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
         <div class="hero-photo">
           <img
             class="hero-figure"
-            src="/assets/rafael-regalado-cutout-640.webp"
+            src="/assets/rafael-regalado-cutout-1086.webp"
             srcset="/assets/rafael-regalado-cutout-640.webp 640w, /assets/rafael-regalado-cutout-1086.webp 1086w"
-            sizes="(max-width: 760px) 60vw, 360px"
+            sizes="(max-width: 900px) 80vw, 560px"
             width="1086" height="1304"
             alt="Portrait of Rafael Regalado"
             fetchpriority="high">
         </div>
 
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span><span data-field="role">Full-stack web developer</span></p>
-          <h1 class="hero-name">
-            <span class="name-first" data-name-part="first">Rafael</span>
-            <span class="name-last" data-name-part="last">Regalado</span>
-          </h1>
-          <p class="lead" data-field="tagline"></p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View my work</a>
-            <a class="btn" href="#contact">Get in touch</a>
+        <div class="hero-side">
+          <div class="side-block">
+            <p class="side-title">My work</p>
+            <p data-field="heroWork"></p>
+            <a class="side-link" href="#projects">Browse projects <span aria-hidden="true">→</span></a>
           </div>
-          <ul class="hero-stack" id="hero-stack" aria-label="Core stack"></ul>
+          <div class="side-block">
+            <p class="side-title">Follow me</p>
+            <ul class="social" id="social-links" aria-label="Social links"></ul>
+          </div>
         </div>
       </div>
     </section>
@@ -76,12 +85,15 @@
     </section>
 
     <section class="section alt" id="skills" aria-labelledby="skills-title">
-      <div class="container split">
-        <div class="section-head">
+      <div class="container skills-layout">
+        <div class="section-head skills-intro">
           <p class="kicker">02</p>
           <h2 id="skills-title">Skills</h2>
+          <p class="section-sub">Languages, tools and practices I use to build and ship software.</p>
+          <dl class="skills-stats" id="skills-stats"></dl>
         </div>
-        <ul class="chips" id="skills-list"></ul>
+        <div class="skills-tech" id="skills-tech" aria-label="Technical skills"></div>
+        <div class="skills-practice" id="skills-practice" aria-label="Practices and soft skills"></div>
       </div>
     </section>
 
@@ -89,15 +101,31 @@
       <div class="container">
         <div class="section-head inline">
           <p class="kicker">03</p>
-          <h2 id="projects-title">Selected projects</h2>
+          <div>
+            <h2 id="projects-title">Academic &amp; Technical Projects</h2>
+            <p class="section-sub">Systems I designed and built in college.</p>
+          </div>
         </div>
         <div class="project-grid" id="project-list"></div>
       </div>
     </section>
 
+    <section class="section certs" id="certifications" aria-labelledby="certs-title">
+      <div class="container">
+        <div class="section-head inline">
+          <p class="kicker">04</p>
+          <div>
+            <h2 id="certs-title">Certifications</h2>
+            <p class="section-sub">Courses I've completed, with links to verify each certificate.</p>
+          </div>
+        </div>
+        <div class="cert-list" id="cert-list"></div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-card">
-        <p class="kicker">04</p>
+        <p class="kicker">05</p>
         <h2 id="contact-title">Let's build something together</h2>
         <p data-field="contactBlurb"></p>
         <ul class="contact-links" id="contact-links"></ul>
@@ -108,7 +136,6 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <span>© <span id="year"></span> <span data-field="name">Rafael Regalado</span></span>
-      <span>Hand-built with HTML, CSS &amp; vanilla JS</span>
     </div>
   </footer>
 

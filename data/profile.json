@@ -2,33 +2,49 @@
   "name": "Rafael Regalado",
   "pronouns": "",
   "photo": "/assets/rafael-regalado-800.jpg",
-  "role": "Full-stack web developer",
+  "role": "Full-stack mobile & web developer",
   "tagline": "I build complete web applications, from the database and REST API to the interface people use.",
   "location": "",
   "summary": "I'm a full-stack developer who works mostly with JavaScript, Node.js and PostgreSQL. I like building systems end to end: data models, secure APIs, payment and email integrations, and fast, accessible front ends without heavy frameworks.",
-  "contactBlurb": "Want to work together or ask about a project? Reach me through the links below.",
-  "email": "",
+  "heroWork": "Academic and technical projects from college, including a hotel booking platform and an intramurals tournament system.",
+  "contactBlurb": "Want to work together or ask about a project? Send me an email and I'll get back to you.",
+  "email": "regaladorafael986@gmail.com",
   "links": [
     {
       "label": "GitHub",
       "url": "https://github.com/regaladorafael986-hue"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@rafaelregalado988"
+    },
+    {
+      "label": "X (Twitter)",
+      "url": "https://x.com/r44434543"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61596794100560"
     }
   ],
   "skills": [
-    "JavaScript (ES modules)",
-    "HTML5 & CSS3",
-    "Node.js",
-    "Express",
-    "REST API design",
-    "PostgreSQL",
-    "Prisma ORM",
-    "Authentication & RBAC",
-    "Payment integrations",
-    "Vercel"
+    { "group": "Languages", "column": "middle", "items": ["HTML", "CSS", "JavaScript", "PHP"] },
+    { "group": "Databases", "column": "middle", "items": ["MySQL", "PostgreSQL", "SQL fundamentals", "phpMyAdmin"] },
+    { "group": "Backend & APIs", "column": "middle", "items": ["Node.js", "Express.js", "REST API integration"] },
+    { "group": "Tools & deployment", "column": "middle", "items": ["Visual Studio Code", "XAMPP", "Git", "GitHub"] },
+    { "group": "Software development", "column": "right", "items": ["CRUD operations", "Database integration", "UI development", "Testing", "Debugging"] },
+    { "group": "AI-assisted development", "column": "right", "items": ["Claude Code", "GitHub Copilot"] },
+    { "group": "Additional skills & interests", "column": "right", "items": ["Team collaboration", "Communication", "Problem-solving", "Self-directed learning"] }
   ],
   "projects": [
     {
       "name": "StayEase — Hotel Booking System",
+      "type": "Full-stack web application",
+      "image": {
+        "src": "/assets/stayease-cover-800.webp",
+        "srcset": "/assets/stayease-cover-800.webp 800w, /assets/stayease-cover-1600.webp 1600w",
+        "alt": "StayEase hotel booking site shown on desktop and mobile, with the availability search, a booking confirmation and the reports panel"
+      },
       "description": "A booking and operations platform for a single hotel. Guests browse rooms, check live availability, and book and pay online or at the hotel. Receptionists run the front desk, and administrators manage rooms, reservations, payments, promotions, reviews and reports.",
       "tech": [
         "HTML/CSS",
@@ -45,7 +61,42 @@
         "PayMongo payments (GCash, Maya, cards), Brevo email and Cloudinary images, with a signed-webhook payment simulator for development",
         "Admin KPI dashboard and 8 reports with PDF and Excel export"
       ],
-      "url": "https://github.com/regaladorafael986-hue/hotel-booking"
+      "url": "",
+      "liveUrl": "https://stay-eas-frontend.vercel.app/"
+    },
+    {
+      "name": "SportsSys — Intramurals Tournament System",
+      "type": "Tournament management system",
+      "image": {
+        "src": "/assets/sportssys-cover-800.webp",
+        "srcset": "/assets/sportssys-cover-800.webp 800w, /assets/sportssys-cover-1600.webp 1600w",
+        "alt": "SportsSys admin dashboard with the referee live scorer, public live scores page and team registration form on mobile"
+      },
+      "description": "A system for running school intramurals. Sports coordinators set up tournaments and approve teams, referees score games live from their phones, and students follow live scores, brackets and standings.",
+      "tech": [],
+      "highlights": [
+        "Coordinator dashboard for users, teams and players, tournaments, schedules, bracketing, standings, announcements, messages and an audit log, with a step-by-step tournament setup wizard",
+        "Mobile live scorer for referees: per-quarter scoring with +1, +2 and +3 buttons, undo, end quarter and final-score submission",
+        "Public page with live scores, brackets, standings and upcoming matches, filtered by sport and by men's, women's and mixed divisions",
+        "Team registration with coach, adviser and a player roster by student ID; teams enter the bracket only after the organizer approves them"
+      ],
+      "url": "",
+      "liveUrl": "https://peachpuff-baboon-839776.hostingersite.com/"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "The Complete Full-Stack Web Development Bootcamp",
+      "issuer": "Udemy",
+      "instructor": "Dr. Angela Yu",
+      "date": "2026-11-05",
+      "length": "62 hours",
+      "url": "https://www.udemy.com/certificate/UC-fb27ce22-9237-4bd4-86ae-8f7ebb5a45db/",
+      "image": {
+        "src": "/assets/cert-udemy-fullstack-800.webp",
+        "srcset": "/assets/cert-udemy-fullstack-800.webp 800w, /assets/cert-udemy-fullstack-1600.webp 1600w",
+        "alt": "Udemy certificate of completion for The Complete Full-Stack Web Development Bootcamp, awarded to Rafael Regalado"
+      }
     }
   ],
   "experience": [],
