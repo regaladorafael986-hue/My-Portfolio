@@ -145,6 +145,25 @@
       })
     );
 
+    // About stats are counted from the profile, so they stay accurate as content is added.
+    const aboutStats = document.getElementById("about-stats");
+    if (aboutStats) {
+      const liveProjects = (p.projects || []).filter((x) => x.liveUrl).length;
+      const certCount = (p.certifications || []).length;
+      const rows = [
+        [liveProjects, liveProjects === 1 ? "Live project" : "Live projects"],
+        [total, "Skills"],
+        [certCount, certCount === 1 ? "Certification" : "Certifications"],
+      ].filter(([n]) => n > 0);
+      aboutStats.replaceChildren(
+        ...rows.map(([value, label]) => {
+          const row = el("div");
+          row.append(el("dt", null, label), el("dd", null, String(value))); // CSS shows the number first
+          return row;
+        })
+      );
+    }
+
     // Certifications: certificate image beside its details, with a link to verify it.
     const certs = document.getElementById("cert-list");
     const certSection = document.getElementById("certifications");
@@ -189,10 +208,53 @@
     // Contact is the formal channel: email only. Social profiles live in the hero's "Follow me".
     const contact = document.getElementById("contact-links");
     contact.replaceChildren();
+    // One card per contact method: logo, label, value (plain text), a Copy button and optional extra action.
+    const contactCard = ({ label, value, display, logoSvg, action }) => {
+      const card = el("div", { class: "contact-method" });
+      const logo = el("span", { class: "contact-logo", "aria-hidden": "true" });
+      logo.innerHTML = logoSvg;
+      const text = el("div", { class: "contact-method-text" });
+      const shown = el("span", { class: "contact-value" });
+      shown.append(...display);
+      text.append(el("span", { class: "contact-label" }, label), shown);
+      const buttons = el("div", { class: "contact-actions" });
+      const copy = el("button", { class: "contact-copy", type: "button", "aria-label": `Copy ${label.toLowerCase()}` }, "Copy");
+      copy.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(value);
+          copy.textContent = "Copied";
+        } catch {
+          // Clipboard blocked: select the value so it can be copied by hand.
+          getSelection().selectAllChildren(shown);
+          copy.textContent = "Press Ctrl+C";
+        }
+        setTimeout(() => (copy.textContent = "Copy"), 2000);
+      });
+      buttons.append(copy);
+      if (action) buttons.append(el("a", { class: "contact-copy", href: action.href }, action.label));
+      card.append(logo, text, buttons);
+      return card;
+    };
+
     if (p.email) {
-      const li = el("li");
-      li.append(el("span", { class: "contact-email" }, p.email));
-      contact.append(li);
+      // Allow a line break only after the "@", never in the middle of a word.
+      const at = p.email.indexOf("@");
+      const display = at > 0 ? [p.email.slice(0, at + 1), document.createElement("wbr"), p.email.slice(at + 1)] : [p.email];
+      const gmail = /@gmail\.com$/i.test(p.email) && window.SKILL_ICONS?.gmail;
+      contact.append(contactCard({ label: "Email", value: p.email, display, logoSvg: gmail || ICONS.email }));
+    }
+    if (p.viber) {
+      // Stored as +63XXXXXXXXXX; shown grouped as +63 9XX XXX XXXX.
+      const digits = p.viber.replace(/[^\d+]/g, "");
+      const grouped = digits.replace(/^(\+63)(\d{3})(\d{3})(\d{4})$/, "$1 $2 $3 $4");
+      contact.append(
+        contactCard({
+          label: "Viber",
+          value: grouped,
+          display: [grouped],
+          logoSvg: window.SKILL_ICONS?.viber || ICONS.link,
+        })
+      );
     }
   }
 

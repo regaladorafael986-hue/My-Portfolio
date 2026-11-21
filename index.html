@@ -42,9 +42,10 @@
             <span class="hero-rule" aria-hidden="true"></span>
           <h1 class="hero-title">I'm <span data-name-part="first">Rafael</span>, a <span class="hero-role" data-field="role">Full-stack mobile &amp; web developer</span></h1>
           <p class="hero-lead" data-field="tagline"></p>
-          <a class="hero-scroll" href="#about" aria-label="Scroll to About">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <div class="hero-actions">
+            <a class="hero-btn hero-btn-primary" href="#contact">Get in touch</a>
+            <a class="hero-btn" href="#projects">View my work</a>
+          </div>
         </div>
 
         <div class="hero-photo">
@@ -72,15 +73,15 @@
       </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container split">
-        <div class="section-head">
-          <p class="kicker">01</p>
-          <h2 id="about-title">About</h2>
+    <section class="section about-band" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-main">
+          <p class="about-kicker"><span>01</span> About me</p>
+          <h2 id="about-title" data-field="aboutTitle">Complete web systems, from the database to the interface.</h2>
+          <p class="about-text" data-field="summary"></p>
+          <a class="side-link" href="#projects">See my projects <span aria-hidden="true">→</span></a>
         </div>
-        <div class="prose">
-          <p data-field="summary"></p>
-        </div>
+        <dl class="about-stats" id="about-stats"></dl>
       </div>
     </section>
 
@@ -125,10 +126,12 @@
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-card">
-        <p class="kicker">05</p>
-        <h2 id="contact-title">Let's build something together</h2>
-        <p data-field="contactBlurb"></p>
-        <ul class="contact-links" id="contact-links"></ul>
+        <div class="contact-intro">
+          <p class="kicker">05 · Contact</p>
+          <h2 id="contact-title">Let's build something together</h2>
+          <p data-field="contactBlurb"></p>
+        </div>
+        <div class="contact-methods" id="contact-links"></div>
       </div>
     </section>
   </main>

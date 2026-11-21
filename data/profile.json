@@ -5,10 +5,12 @@
   "role": "Full-stack mobile & web developer",
   "tagline": "I build complete web applications, from the database and REST API to the interface people use.",
   "location": "",
+  "aboutTitle": "Complete web systems, from the database to the interface.",
   "summary": "I'm a full-stack developer who works mostly with JavaScript, Node.js and PostgreSQL. I like building systems end to end: data models, secure APIs, payment and email integrations, and fast, accessible front ends without heavy frameworks.",
   "heroWork": "Academic and technical projects from college, including a hotel booking platform and an intramurals tournament system.",
-  "contactBlurb": "Want to work together or ask about a project? Send me an email and I'll get back to you.",
+  "contactBlurb": "Want to work together or ask about a project? Send me an email or message me on Viber, and I'll get back to you.",
   "email": "regaladorafael986@gmail.com",
+  "viber": "+639278772056",
   "links": [
     {
       "label": "GitHub",
