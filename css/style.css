@@ -207,7 +207,7 @@ a:hover { color: var(--accent-hover); }
 /* Brand logos sit on a white tile in both themes so their official colours always read. */
 .skill-icon.is-brand { background: #fff; border: 1px solid var(--border); color: #181717; }
 .skill-icon svg { width: 20px; height: 20px; }
-.skill-icon.is-brand svg { width: 22px; height: 22px; }
+.skill-icon.is-brand svg, .skill-icon img { width: 22px; height: 22px; }
 
 /* Middle: each skill is a tile. */
 .skills-tech .skill-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 168px), 1fr)); gap: 10px; }
@@ -226,7 +226,7 @@ a:hover { color: var(--accent-hover); }
 .skills-practice .skill { font-size: 14.5px; }
 .skills-practice .skill-icon { width: 32px; height: 32px; border-radius: 9px; }
 .skills-practice .skill-icon svg { width: 17px; height: 17px; }
-.skills-practice .skill-icon.is-brand svg { width: 19px; height: 19px; }
+.skills-practice .skill-icon.is-brand svg, .skills-practice .skill-icon img { width: 19px; height: 19px; }
 
 @media (max-width: 1000px) {
   .skills-layout { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
